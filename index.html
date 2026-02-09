@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+    }
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    #yes {
+      background: white;
+      color: #ff4f7a;
+      font-weight: bold;
+    }
+    #no {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Hey My Love ❤️</h1>
+  <p>
+    I checked my heart’s codebase  
+    and there’s only one contributor I want.  
+    <br><br>
+    Will you be my Valentine? 💘
+  </p>
+
+  <button id="yes" onclick="yesClicked()">Yes 💖</button>
+  <button id="no" onmouseover="moveNo()">No 😅</button>
+</div>
+
+<script>
+  function yesClicked() {
+    document.body.innerHTML = `
+      <h1>🎉 Merge Successful! 🎉</h1>
+      <p>You’re my Valentine ❤️</p>
+    `;
+  }
+
+  function moveNo() {
+    const btn = document.getElementById("no");
+    btn.style.position = "absolute";
+    btn.style.left = Math.random() * 80 + "vw";
+    btn.style.top = Math.random() * 80 + "vh";
+  }
+</script>
+
+</body>
+</html>
